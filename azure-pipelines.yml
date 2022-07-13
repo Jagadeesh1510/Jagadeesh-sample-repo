@@ -7,15 +7,16 @@ trigger:
 - main
 
 pool:
-  name: Azure pipeline
-  vmImage: ubuntu-latest
+  vmImage: 'windows-2019'
 
 variables:
   buildConfiguration: 'Release'
 
+
 steps:
-- task: DotNetCoreCLI@2
-    displayName: 'build'
-      inputs:
-      version: 5.0.x
-      performMultiLevelLookup: true
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '5.0.X'
+    performMultiLevelLookup: true
+
