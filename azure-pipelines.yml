@@ -15,7 +15,7 @@ variables:
 
 steps:
 - task: DotNetCoreCLI@2
-    displayName: 'Install .NET Core SDK'
+    displayName: 'build'
       inputs:
       version: 5.0.x
       performMultiLevelLookup: true
