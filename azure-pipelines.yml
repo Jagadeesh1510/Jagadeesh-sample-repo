@@ -14,8 +14,8 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-task: DotNetCoreCLI@2
-  displayName: 'Install .NET Core SDK'
-  inputs:
+- task: DotNetCoreCLI@2
+    displayName: 'Install .NET Core SDK'
+      inputs:
       version: 5.0.x
       performMultiLevelLookup: true
